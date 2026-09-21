@@ -3,464 +3,377 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إعدادي+ | منصتك التعليمية</title>
+<title>منهجنا | منصتك التعليمية</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Tahoma,Arial,sans-serif;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  background:#f5f7fb;
-  color:#172033;
+    font-family:"Tahoma","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#172033;
 }
-
-button,input,select{
-  font-family:inherit;
-}
-
-.hidden{
-  display:none!important;
-}
+button,input,select{font-family:inherit}
+.hidden{display:none!important}
 
 /* LOGIN */
 .login-page{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  background:linear-gradient(135deg,#172554,#2563eb);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+    background:linear-gradient(135deg,#0f172a,#123b63,#087f8c);
 }
-
 .login-box{
-  width:100%;
-  max-width:430px;
-  background:white;
-  border-radius:25px;
-  padding:35px;
-  box-shadow:0 20px 60px rgba(0,0,0,.2);
+    width:100%;
+    max-width:460px;
+    background:white;
+    padding:40px;
+    border-radius:28px;
+    box-shadow:0 25px 70px #0004;
 }
-
 .logo{
-  width:70px;
-  height:70px;
-  border-radius:20px;
-  background:#2563eb;
-  color:white;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:25px;
-  font-weight:bold;
-  margin:0 auto 18px;
+    width:70px;
+    height:70px;
+    background:linear-gradient(135deg,#087f8c,#155eef);
+    color:white;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    margin:auto auto 18px;
 }
-
-.login-box h1{
-  text-align:center;
-  font-size:30px;
-  margin-bottom:8px;
-}
-
-.subtitle{
-  text-align:center;
-  color:#64748b;
-  margin-bottom:28px;
-}
-
-.field{
-  margin-bottom:17px;
-}
-
+.login-box h1{text-align:center;font-size:32px}
+.login-box p{text-align:center;color:#697386;margin:10px 0 30px}
+.field{margin-bottom:18px}
 .field label{
-  display:block;
-  margin-bottom:8px;
-  font-weight:bold;
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
 }
-
-.field input,
-.field select{
-  width:100%;
-  padding:14px;
-  border:1px solid #dbe2ea;
-  border-radius:12px;
-  outline:none;
-  font-size:15px;
+.field input,.field select{
+    width:100%;
+    padding:14px;
+    border:1px solid #dce1ea;
+    border-radius:13px;
+    outline:none;
+    font-size:15px;
 }
-
-.field input:focus,
-.field select:focus{
-  border-color:#2563eb;
+.field input:focus,.field select:focus{
+    border-color:#087f8c;
 }
-
-.main-btn{
-  width:100%;
-  border:0;
-  padding:15px;
-  border-radius:13px;
-  background:#2563eb;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
+.btn{
+    border:0;
+    padding:13px 20px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.2s;
 }
-
-.main-btn:hover{
-  background:#1d4ed8;
+.btn:hover{transform:translateY(-2px)}
+.primary{
+    background:linear-gradient(135deg,#087f8c,#155eef);
+    color:white;
 }
+.full{width:100%}
 
 /* APP */
 .app{
-  min-height:100vh;
-  display:flex;
+    min-height:100vh;
+    display:flex;
 }
-
-/* SIDEBAR */
 .sidebar{
-  width:250px;
-  background:#111827;
-  color:white;
-  min-height:100vh;
-  padding:22px 15px;
-  position:fixed;
-  right:0;
-  top:0;
-  bottom:0;
+    width:250px;
+    background:#101827;
+    color:white;
+    padding:22px 15px;
+    position:fixed;
+    right:0;
+    top:0;
+    bottom:0;
 }
-
-.side-logo{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px;
-  margin-bottom:25px;
+.brand{
+    font-size:25px;
+    font-weight:bold;
+    padding:12px 15px 28px;
 }
-
-.side-logo .small-logo{
-  width:43px;
-  height:43px;
-  border-radius:13px;
-  background:#2563eb;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
+.brand small{
+    display:block;
+    color:#8fa2ba;
+    font-size:11px;
+    margin-top:5px;
 }
-
-.side-logo h2{
-  font-size:20px;
+.nav{
+    width:100%;
+    border:0;
+    background:transparent;
+    color:#bdc7d5;
+    padding:14px;
+    border-radius:12px;
+    text-align:right;
+    margin:4px 0;
+    cursor:pointer;
+    font-size:15px;
 }
-
-.nav-btn{
-  width:100%;
-  border:0;
-  background:transparent;
-  color:#cbd5e1;
-  padding:13px;
-  border-radius:11px;
-  text-align:right;
-  cursor:pointer;
-  margin-bottom:5px;
-  font-size:15px;
+.nav:hover,.nav.active{
+    background:#ffffff15;
+    color:white;
 }
+.logout{color:#ff9b9b;margin-top:25px}
 
-.nav-btn:hover,
-.nav-btn.active{
-  background:#1e293b;
-  color:white;
+.main{
+    margin-right:250px;
+    width:calc(100% - 250px);
+    padding:28px;
 }
-
-.logout{
-  margin-top:20px;
-  color:#fca5a5;
-}
-
-/* CONTENT */
-.content{
-  width:calc(100% - 250px);
-  margin-right:250px;
-  padding:25px;
-}
-
 .topbar{
-  background:white;
-  padding:17px 22px;
-  border-radius:17px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:25px;
-  box-shadow:0 3px 15px rgba(0,0,0,.04);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+.topbar h2{font-size:25px}
+.user-mini{
+    background:white;
+    padding:10px 15px;
+    border-radius:14px;
+    box-shadow:0 5px 20px #00000009;
 }
 
-.student-info{
-  display:flex;
-  align-items:center;
-  gap:12px;
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#0f172a,#087f8c,#155eef);
+    color:white;
+    padding:35px;
+    border-radius:25px;
+    margin-bottom:25px;
+}
+.hero h1{font-size:34px;margin-bottom:12px}
+.hero p{color:#e2eff5;line-height:1.8}
+.hero .btn{
+    background:white;
+    color:#087f8c;
+    margin-top:20px;
 }
 
-.avatar{
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  background:#dbeafe;
-  color:#2563eb;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:bold;
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
-
-/* HOME */
-.welcome{
-  background:linear-gradient(135deg,#1d4ed8,#2563eb);
-  color:white;
-  border-radius:22px;
-  padding:30px;
-  margin-bottom:22px;
+.card{
+    background:white;
+    padding:24px;
+    border-radius:20px;
+    box-shadow:0 8px 30px #00000008;
 }
-
-.welcome h1{
-  margin-bottom:8px;
+.card .icon{
+    font-size:28px;
+    margin-bottom:12px;
 }
-
-.welcome p{
-  opacity:.9;
-}
-
-.stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-  margin-bottom:25px;
-}
-
-.stat{
-  background:white;
-  border-radius:17px;
-  padding:22px;
-  box-shadow:0 3px 15px rgba(0,0,0,.04);
-}
-
-.stat-number{
-  font-size:27px;
-  font-weight:bold;
-  margin-bottom:5px;
-}
-
-.stat-title{
-  color:#64748b;
-  font-size:14px;
-}
+.card h3{margin-bottom:8px}
+.card p{color:#697386;line-height:1.7}
 
 .section-title{
-  margin:25px 0 15px;
-}
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:17px;
-}
-
-.card{
-  background:white;
-  border-radius:18px;
-  padding:22px;
-  box-shadow:0 3px 15px rgba(0,0,0,.04);
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-3px);
-}
-
-.subject-icon{
-  width:50px;
-  height:50px;
-  border-radius:14px;
-  background:#eff6ff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:24px;
-  margin-bottom:14px;
-}
-
-.card h3{
-  margin-bottom:8px;
-}
-
-.card p{
-  color:#64748b;
-  font-size:14px;
-  margin-bottom:15px;
-}
-
-.small-btn{
-  border:0;
-  background:#eff6ff;
-  color:#2563eb;
-  padding:9px 13px;
-  border-radius:9px;
-  cursor:pointer;
-  font-weight:bold;
+    margin:28px 0 15px;
 }
 
 /* GRADES */
+.grades{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
 .grade-card{
-  cursor:pointer;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #edf0f5;
+    cursor:pointer;
+    transition:.2s;
 }
-
-.grade-card.selected{
-  border:2px solid #2563eb;
+.grade-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px #0001;
 }
-
 .grade-number{
-  font-size:40px;
-  font-weight:bold;
-  color:#2563eb;
-  margin-bottom:10px;
+    width:55px;
+    height:55px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e8f7f8;
+    color:#087f8c;
+    font-weight:bold;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+/* EXAMS */
+.exam-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+.exam-card{
+    color:white;
+    padding:30px;
+    border-radius:24px;
+}
+.easy{background:linear-gradient(135deg,#087f8c,#16a085)}
+.hard{background:linear-gradient(135deg,#9b2335,#e74c3c)}
+.exam-card p{margin:12px 0 20px;color:#fff9;line-height:1.7}
+.exam-card .btn{
+    background:white;
+    color:#172033;
 }
 
 /* QUIZ */
 .quiz-box{
-  max-width:750px;
-  margin:auto;
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 3px 20px rgba(0,0,0,.05);
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:24px;
 }
-
+.progress{
+    height:8px;
+    background:#edf0f5;
+    border-radius:10px;
+    overflow:hidden;
+    margin:15px 0 25px;
+}
+.progress div{
+    height:100%;
+    background:#087f8c;
+    width:0%;
+}
 .question{
-  font-size:20px;
-  font-weight:bold;
-  margin:20px 0;
+    font-size:22px;
+    font-weight:bold;
+    line-height:1.6;
+    margin-bottom:25px;
 }
-
 .answers{
-  display:grid;
-  gap:12px;
+    display:grid;
+    gap:12px;
 }
-
 .answer{
-  padding:15px;
-  border:1px solid #dbe2ea;
-  background:white;
-  border-radius:12px;
-  cursor:pointer;
-  text-align:right;
+    padding:16px;
+    border:2px solid #e4e8ef;
+    background:white;
+    border-radius:13px;
+    cursor:pointer;
+    text-align:right;
 }
-
 .answer:hover{
-  background:#eff6ff;
-  border-color:#2563eb;
+    border-color:#087f8c;
+    background:#f3fbfb;
+}
+.answer.correct{
+    background:#dff7e8;
+    border-color:#21a35a;
+}
+.answer.wrong{
+    background:#ffe4e4;
+    border-color:#e04747;
+}
+.result{
+    text-align:center;
+    padding:30px;
+}
+.score{
+    font-size:50px;
+    font-weight:bold;
+    color:#087f8c;
+    margin:15px;
 }
 
-.answer.selected{
-  background:#dbeafe;
-  border-color:#2563eb;
+/* AI */
+.ai-box{
+    background:white;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 8px 30px #00000008;
 }
-
-.quiz-actions{
-  display:flex;
-  justify-content:space-between;
-  margin-top:25px;
+.ai-head{
+    padding:20px;
+    background:#101827;
+    color:white;
 }
-
-/* ASSIGNMENTS */
-.assignment{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
+.chat{
+    height:420px;
+    overflow:auto;
+    padding:20px;
 }
-
-.check{
-  width:22px;
-  height:22px;
-  cursor:pointer;
+.message{
+    padding:13px 16px;
+    border-radius:15px;
+    margin-bottom:12px;
+    max-width:80%;
+    line-height:1.7;
+}
+.bot{
+    background:#eef7f8;
+    margin-left:auto;
+}
+.me{
+    background:#155eef;
+    color:white;
+    margin-right:auto;
+}
+.ai-input{
+    display:flex;
+    gap:10px;
+    padding:15px;
+    border-top:1px solid #eee;
+}
+.ai-input input{
+    flex:1;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
 }
 
 /* PROFILE */
 .profile-box{
-  max-width:650px;
-  background:white;
-  padding:30px;
-  border-radius:20px;
+    max-width:600px;
+    background:white;
+    padding:28px;
+    border-radius:22px;
 }
-
-.profile-row{
-  padding:15px 0;
-  border-bottom:1px solid #e5e7eb;
-  display:flex;
-  justify-content:space-between;
+.info{
+    display:flex;
+    justify-content:space-between;
+    padding:16px 0;
+    border-bottom:1px solid #eee;
 }
-
-.profile-row:last-child{
-  border-bottom:0;
-}
+.info:last-child{border:0}
 
 /* MOBILE */
-@media(max-width:900px){
-  .sidebar{
-    width:75px;
-    padding:15px 8px;
-  }
-
-  .side-logo h2,
-  .nav-btn span{
-    display:none;
-  }
-
-  .side-logo{
-    justify-content:center;
-  }
-
-  .nav-btn{
-    text-align:center;
-    font-size:20px;
-  }
-
-  .content{
-    width:calc(100% - 75px);
-    margin-right:75px;
-  }
-
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .cards{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px){
-  .content{
-    padding:12px;
-  }
-
-  .topbar{
-    padding:13px;
-  }
-
-  .stats,
-  .cards{
-    grid-template-columns:1fr;
-  }
-
-  .welcome{
-    padding:22px;
-  }
-
-  .login-box{
-    padding:25px;
-  }
+@media(max-width:850px){
+    .sidebar{
+        width:75px;
+        padding:15px 8px;
+    }
+    .brand{
+        text-align:center;
+        font-size:18px;
+    }
+    .brand small,.nav span{display:none}
+    .nav{text-align:center;font-size:22px}
+    .main{
+        margin-right:75px;
+        width:calc(100% - 75px);
+        padding:18px;
+    }
+    .grid,.grades,.exam-grid{
+        grid-template-columns:1fr;
+    }
+    .hero h1{font-size:27px}
 }
 </style>
 </head>
@@ -469,853 +382,917 @@ button,input,select{
 
 <!-- LOGIN -->
 <div id="loginPage" class="login-page">
-  <div class="login-box">
+    <div class="login-box">
+        <div class="logo">م</div>
+        <h1>منهجنا</h1>
+        <p>منصتك التعليمية لطلبة البحرين</p>
 
-    <div class="logo">+ع</div>
+        <div class="field">
+            <label>اسم الطالب</label>
+            <input id="studentName" placeholder="اكتب اسمك">
+        </div>
 
-    <h1>إعدادي+</h1>
-    <p class="subtitle">كل اللي تحتاجه لمدرستك في مكان واحد.</p>
+        <div class="field">
+            <label>الجنس</label>
+            <select id="gender">
+                <option value="">اختر</option>
+                <option>ذكر</option>
+                <option>أنثى</option>
+            </select>
+        </div>
 
-    <div class="field">
-      <label>اسم الطالب</label>
-      <input id="nameInput" type="text" placeholder="اكتب اسمك">
+        <div class="field">
+            <label>الصف</label>
+            <select id="grade">
+                <option value="">اختر صفك</option>
+                <option value="6">الصف السادس</option>
+                <option value="7">الأول الإعدادي</option>
+                <option value="8">الثاني الإعدادي</option>
+                <option value="9">الثالث الإعدادي</option>
+            </select>
+        </div>
+
+        <button class="btn primary full" onclick="login()">
+            دخول إلى منهجنا
+        </button>
     </div>
-
-    <div class="field">
-      <label>الجنس</label>
-      <select id="genderInput">
-        <option value="">اختر</option>
-        <option value="ذكر">ذكر</option>
-        <option value="أنثى">أنثى</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label>الصف</label>
-      <select id="gradeInput">
-        <option value="">اختر الصف</option>
-        <option value="الأول الإعدادي">الأول الإعدادي</option>
-        <option value="الثاني الإعدادي">الثاني الإعدادي</option>
-        <option value="الثالث الإعدادي">الثالث الإعدادي</option>
-        <option value="السادس الابتدائي">السادس الابتدائي</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label>كلمة المرور</label>
-      <input id="passwordInput" type="password" placeholder="اكتب كلمة مرور">
-    </div>
-
-    <button class="main-btn" onclick="login()">دخول إلى إعدادي+</button>
-
-  </div>
 </div>
-
 
 <!-- APP -->
 <div id="app" class="app hidden">
 
-  <aside class="sidebar">
-
-    <div class="side-logo">
-      <div class="small-logo">+ع</div>
-      <h2>منهجنا</h2>
+<aside class="sidebar">
+    <div class="brand">
+        📚 منهجنا
+        <small>تعلم • اختبر • تطور</small>
     </div>
 
-    <button class="nav-btn active" onclick="showPage('home',this)">
-      🏠 <span>الرئيسية</span>
+    <button class="nav active" onclick="page('home',this)">
+        🏠 <span>الرئيسية</span>
     </button>
 
-    <button class="nav-btn" onclick="showPage('grades',this)">
-      🎓 <span>الصفوف</span>
+    <button class="nav" onclick="page('grades',this)">
+        🎓 <span>الصفوف</span>
     </button>
 
-    <button class="nav-btn" onclick="showPage('subjects',this)">
-      📚 <span>المواد</span>
+    <button class="nav" onclick="page('exams',this)">
+        📝 <span>الاختبارات</span>
     </button>
 
-    <button class="nav-btn" onclick="showPage('quizzes',this)">
-      📝 <span>الاختبارات</span>
+    <button class="nav" onclick="page('ai',this)">
+        🤖 <span>مساعد AI</span>
     </button>
 
-    <button class="nav-btn" onclick="showPage('assignments',this)">
-      📋 <span>الواجبات</span>
+    <button class="nav" onclick="page('profile',this)">
+        👤 <span>حسابي</span>
     </button>
 
-    <button class="nav-btn" onclick="showPage('profile',this)">
-      👤 <span>حسابي</span>
+    <button class="nav logout" onclick="logout()">
+        🚪 <span>تسجيل الخروج</span>
     </button>
+</aside>
 
-    <button class="nav-btn logout" onclick="logout()">
-      🚪 <span>تسجيل الخروج</span>
-    </button>
+<main class="main">
 
-  </aside>
+<div class="topbar">
+    <h2 id="pageTitle">الرئيسية</h2>
+    <div class="user-mini" id="miniUser">طالب</div>
+</div>
 
-
-  <main class="content">
-
-    <div class="topbar">
-      <div>
-        <strong id="pageTitle">الرئيسية</strong>
-      </div>
-
-      <div class="student-info">
-        <div>
-          <strong id="studentNameTop">الطالب</strong>
-          <div id="studentGradeTop" style="font-size:12px;color:#64748b"></div>
-        </div>
-        <div class="avatar" id="avatar">ط</div>
-      </div>
+<!-- HOME -->
+<section id="homePage">
+    <div class="hero">
+        <h1>هلا والله 👋</h1>
+        <p>
+            حياك في <b>منهجنا</b>، منصتك التعليمية لطلبة
+            الصف السادس والمرحلة الإعدادية في البحرين.
+        </p>
+        <button class="btn" onclick="page('exams')">
+            ابدأ اختبارك الآن
+        </button>
     </div>
 
-
-    <!-- HOME -->
-    <section id="homePage">
-
-      <div class="welcome">
-        <h1>هلا والله، <span id="welcomeName"></span> 👋</h1>
-        <p>حياك في منهجنا، خل دراستك أسهل وأرتب.</p>
-      </div>
-
-      <div class="stats">
-
-        <div class="stat">
-          <div class="stat-number" id="subjectCount">6</div>
-          <div class="stat-title">المواد</div>
+    <div class="grid">
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>صفوف متعددة</h3>
+            <p>السادس والأول والثاني والثالث الإعدادي.</p>
         </div>
 
-        <div class="stat">
-          <div class="stat-number" id="quizCount">3</div>
-          <div class="stat-title">الاختبارات</div>
+        <div class="card">
+            <div class="icon">📝</div>
+            <h3>اختبارات</h3>
+            <p>اختبارات سهلة وصعبة مع حساب نتيجتك.</p>
         </div>
 
-        <div class="stat">
-          <div class="stat-number" id="assignmentCount">4</div>
-          <div class="stat-title">الواجبات</div>
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>مساعد AI</h3>
+            <p>مكان مخصص لمساعدتك في فهم دروسك.</p>
+        </div>
+    </div>
+</section>
+
+<!-- GRADES -->
+<section id="gradesPage" class="hidden">
+    <h3 class="section-title">اختر صفك</h3>
+
+    <div class="grades">
+
+        <div class="grade-card" onclick="selectGrade(6)">
+            <div class="grade-number">٦</div>
+            <h3>الصف السادس</h3>
+            <p>المرحلة الابتدائية — التعليم الأساسي.</p>
         </div>
 
-        <div class="stat">
-          <div class="stat-number" id="completedCount">0</div>
-          <div class="stat-title">واجبات مكتملة</div>
+        <div class="grade-card" onclick="selectGrade(7)">
+            <div class="grade-number">٧</div>
+            <h3>الأول الإعدادي</h3>
+            <p>السنة الأولى من المرحلة الإعدادية.</p>
         </div>
 
-      </div>
+        <div class="grade-card" onclick="selectGrade(8)">
+            <div class="grade-number">٨</div>
+            <h3>الثاني الإعدادي</h3>
+            <p>السنة الثانية من المرحلة الإعدادية.</p>
+        </div>
 
-      <h2 class="section-title">موادك الدراسية</h2>
+        <div class="grade-card" onclick="selectGrade(9)">
+            <div class="grade-number">٩</div>
+            <h3>الثالث الإعدادي</h3>
+            <p>السنة الثالثة من المرحلة الإعدادية.</p>
+        </div>
 
-      <div id="homeSubjects" class="cards"></div>
+    </div>
+</section>
 
-    </section>
+<!-- EXAMS -->
+<section id="examsPage" class="hidden">
 
+    <div class="hero">
+        <h1>اختبر نفسك 📝</h1>
+        <p>
+            اختر مستوى الاختبار المناسب لك.
+            يتم حساب النتيجة بعد الانتهاء.
+        </p>
+    </div>
 
-    <!-- GRADES -->
-    <section id="gradesPage" class="hidden">
+    <div class="exam-grid">
 
-      <h1>الصفوف الدراسية 🎓</h1>
-      <p style="color:#64748b;margin-top:8px">
-        اختر صفك الدراسي للوصول إلى مواده.
-      </p>
+        <div class="exam-card easy">
+            <h2>🟢 اختبار سهل</h2>
+            <p>
+                10 أسئلة تدريبية مناسبة للمراجعة
+                وتثبيت المعلومات.
+            </p>
+            <button class="btn" onclick="startQuiz('easy')">
+                ابدأ الاختبار
+            </button>
+        </div>
 
-      <div class="cards" style="margin-top:25px">
-        <div class="card grade-card"
-     onclick="openSixthGrade()">
+        <div class="exam-card hard">
+            <h2>🔴 اختبار صعب</h2>
+            <p>
+                15 سؤالًا بمستوى أعلى لتحدي نفسك.
+            </p>
+            <button class="btn" onclick="startQuiz('hard')">
+                ابدأ الاختبار
+            </button>
+        </div>
 
-  <div class="grade-number">6</div>
+    </div>
+</section>
 
-  <h3>السادس</h3>
+<!-- QUIZ -->
+<section id="quizPage" class="hidden">
 
-  <p>
-    منهج الصف السادس والمواد والاختبارات.
-  </p>
+    <div class="quiz-box">
 
-  <button class="small-btn">
-    دخول للصف
-  </button>
+        <div id="quizTop"></div>
 
+        <div class="progress">
+            <div id="progressBar"></div>
+        </div>
+
+        <div id="questionArea"></div>
+
+    </div>
+
+</section>
+
+<!-- AI -->
+<section id="aiPage" class="hidden">
+
+    <div class="ai-box">
+
+        <div class="ai-head">
+            <h2>🤖 مساعد منهجنا AI</h2>
+            <p>اسأل عن دروسك وساعد نفسك على الفهم.</p>
+        </div>
+
+        <div class="chat" id="chat">
+
+            <div class="message bot">
+                هلا! 👋 أنا مساعد منهجنا.
+                اكتب سؤالك الدراسي هنا.
+            </div>
+
+        </div>
+
+        <div class="ai-input">
+            <input id="aiInput"
+                   placeholder="اكتب سؤالك هنا..."
+                   onkeydown="if(event.key==='Enter')askAI()">
+
+            <button class="btn primary" onclick="askAI()">
+                إرسال
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROFILE -->
+<section id="profilePage" class="hidden">
+
+    <div class="profile-box">
+
+        <h2>👤 حسابي</h2>
+
+        <div class="info">
+            <span>الاسم</span>
+            <b id="profileName">-</b>
+        </div>
+
+        <div class="info">
+            <span>الجنس</span>
+            <b id="profileGender">-</b>
+        </div>
+
+        <div class="info">
+            <span>الصف</span>
+            <b id="profileGrade">-</b>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
 </div>
-
-        <div class="card grade-card" onclick="changeGrade('الأول الإعدادي')">
-          <div class="grade-number">1</div>
-          <h3>الأول الإعدادي</h3>
-          <p>مواد ودروس واختبارات.</p>
-          <button class="small-btn">اختيار الصف</button>
-        </div>
-
-        <div class="card grade-card" onclick="changeGrade('الثاني الإعدادي')">
-          <div class="grade-number">2</div>
-          <h3>الثاني الإعدادي</h3>
-          <p>مواد ودروس واختبارات.</p>
-          <button class="small-btn">اختيار الصف</button>
-        </div>
-
-        <div class="card grade-card" onclick="changeGrade('الثالث الإعدادي')">
-          <div class="grade-number">3</div>
-          <h3>الثالث الإعدادي</h3>
-          <p>مواد ودروس واختبارات.</p>
-          <button class="small-btn">اختيار الصف</button>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SUBJECTS -->
-    <section id="subjectsPage" class="hidden">
-
-      <h1>المواد 📚</h1>
-      <p id="subjectsSubtitle" style="color:#64748b;margin-top:8px"></p>
-
-      <div id="subjectsList" class="cards" style="margin-top:25px"></div>
-
-    </section>
-
-
-    <!-- QUIZZES -->
-    <section id="quizzesPage" class="hidden">
-
-      <h1>الاختبارات 📝</h1>
-      <p style="color:#64748b;margin-top:8px">
-        اختبر معلوماتك واحسب درجتك.
-      </p>
-
-      <div id="quizSelection" class="cards" style="margin-top:25px"></div>
-
-      <div id="quizContainer" class="quiz-box hidden"></div>
-
-    </section>
-
-
-    <!-- ASSIGNMENTS -->
-    <section id="assignmentsPage" class="hidden">
-
-      <h1>الواجبات 📋</h1>
-
-      <div id="assignmentsList" style="margin-top:25px"></div>
-
-    </section>
-
-
-    <!-- PROFILE -->
-    <section id="profilePage" class="hidden">
-
-      <h1>حسابي 👤</h1>
-
-      <div class="profile-box" style="margin-top:25px">
-
-        <div class="profile-row">
-          <strong>الاسم</strong>
-          <span id="profileName"></span>
-        </div>
-
-        <div class="profile-row">
-          <strong>الجنس</strong>
-          <span id="profileGender"></span>
-        </div>
-
-        <div class="profile-row">
-          <strong>الصف</strong>
-          <span id="profileGrade"></span>
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-</div>
-
 
 <script>
 
-let user = JSON.parse(localStorage.getItem("idadiUser")) || null;
+/* =========================
+   DATA
+========================= */
 
-const subjects = [
-  {
-    name:"اللغة العربية",
-    icon:"📖",
-    desc:"اللغة والنحو والقراءة والتعبير."
-  },
-  {
-    name:"الرياضيات",
-    icon:"📐",
-    desc:"الأعداد والجبر والهندسة والمسائل."
-  },
-  {
-    name:"اللغة الإنجليزية",
-    icon:"🔤",
-    desc:"Grammar وVocabulary وReading."
-  },
-  {
-    name:"العلوم",
-    icon:"🔬",
-    desc:"دروس وتجارب ومفاهيم علمية."
-  },
-  {
-    name:"الدراسات الاجتماعية",
-    icon:"🌍",
-    desc:"التاريخ والجغرافيا والمجتمع."
-  },
-  {
-    name:"تقنية المعلومات",
-    icon:"💻",
-    desc:"الحاسب والبرمجة والتقنية."
-  }
-];
+const gradeNames = {
+    6:"الصف السادس",
+    7:"الأول الإعدادي",
+    8:"الثاني الإعدادي",
+    9:"الثالث الإعدادي"
+};
 
-const quizzes = [
-  {
-    subject:"الرياضيات",
-    questions:[
-      {
-        q:"كم يساوي 5 × 6؟",
-        answers:["20","25","30","35"],
-        correct:2
-      },
-      {
-        q:"كم يساوي 100 ÷ 4؟",
-        answers:["20","25","30","40"],
-        correct:1
-      },
-      {
-        q:"ما ناتج 12 + 18؟",
-        answers:["20","25","30","35"],
-        correct:2
-      }
-    ]
-  },
-  {
-    subject:"اللغة العربية",
-    questions:[
-      {
-        q:"أي كلمة من الآتي اسم إشارة؟",
-        answers:["هذا","كتب","طالب","جميل"],
-        correct:0
-      },
-      {
-        q:"ما جمع كلمة «كتاب»؟",
-        answers:["كاتب","كتب","مكتوب","كتابة"],
-        correct:1
-      },
-      {
-        q:"أي كلمة فعل؟",
-        answers:["مدرسة","يكتب","طالب","قلم"],
-        correct:1
-      }
-    ]
-  },
-  {
-    subject:"اللغة الإنجليزية",
-    questions:[
-      {
-        q:"What is the opposite of 'big'?",
-        answers:["Small","Fast","Tall","Long"],
-        correct:0
-      },
-      {
-        q:"Choose the correct word: I ___ a student.",
-        answers:["am","is","are","be"],
-        correct:0
-      },
-      {
-        q:"What is the plural of 'book'?",
-        answers:["bookes","books","bookies","book"],
-        correct:1
-      }
-    ]
-  }
-];
+/*
+   بنك أسئلة أولي.
+   يمكن استبداله لاحقًا ببنك أسئلة
+   مطابق لكل خطة دراسية رسمية.
+*/
 
-let currentQuiz = null;
-let currentQuestion = 0;
-let score = 0;
-let selectedAnswer = null;
+const questions = {
 
-let assignments = JSON.parse(localStorage.getItem("idadiAssignments")) || [
-  {name:"مراجعة درس اللغة العربية",done:false},
-  {name:"حل تمارين الرياضيات",done:false},
-  {name:"مراجعة كلمات اللغة الإنجليزية",done:false},
-  {name:"قراءة درس العلوم",done:false}
-];
+6:{
+easy:[
+{
+q:"ما ناتج 5 × 6؟",
+a:["20","25","30","35"],
+c:2
+},
+{
+q:"ما ناتج 100 ÷ 4؟",
+a:["20","25","30","40"],
+c:1
+},
+{
+q:"أي كلمة اسم إشارة؟",
+a:["هذا","كتب","طالب","مدرسة"],
+c:0
+},
+{
+q:"ما جمع كلمة «كتاب»؟",
+a:["كاتب","كتب","مكتوب","كتابة"],
+c:1
+},
+{
+q:"أي مما يأتي كوكب؟",
+a:["القمر","الشمس","الأرض","المجرة"],
+c:2
+},
+{
+q:"ما وحدة قياس الطول؟",
+a:["اللتر","المتر","الكيلوغرام","الثانية"],
+c:1
+},
+{
+q:"ما عكس كلمة Big؟",
+a:["Small","Fast","Tall","Long"],
+c:0
+},
+{
+q:"ما ناتج 12 + 18؟",
+a:["20","25","30","35"],
+c:2
+},
+{
+q:"أي مما يأتي مصدر طبيعي للماء؟",
+a:["البحر","الكتاب","السيارة","المبنى"],
+c:0
+},
+{
+q:"كم عدد أيام الأسبوع؟",
+a:["5","6","7","8"],
+c:2
+}
+],
+
+hard:[
+{
+q:"إذا كان س = 8، فما قيمة 3س + 4؟",
+a:["20","24","28","32"],
+c:2
+},
+{
+q:"ما العدد الأولي؟",
+a:["21","27","29","33"],
+c:2
+},
+{
+q:"ما الكسر المكافئ لـ 1/2؟",
+a:["2/3","2/4","3/5","4/6"],
+c:1
+},
+{
+q:"إذا كان محيط مربع 20 سم، فما طول ضلعه؟",
+a:["4 سم","5 سم","6 سم","10 سم"],
+c:1
+},
+{
+q:"أي عملية تحدث للنبات لصنع غذائه؟",
+a:["التنفس","البناء الضوئي","الهضم","التبخر"],
+c:1
+}
+]
+},
+
+7:{
+easy:[
+{
+q:"ما ناتج 7 × 8؟",
+a:["48","54","56","64"],
+c:2
+},
+{
+q:"أي مما يأتي اسم؟",
+a:["ذهب","مدرسة","يكتب","اقرأ"],
+c:1
+},
+{
+q:"ما ناتج 45 ÷ 5؟",
+a:["7","8","9","10"],
+c:2
+},
+{
+q:"أي عدد يقبل القسمة على 2؟",
+a:["15","21","34","45"],
+c:2
+},
+{
+q:"ما ضد كلمة «قديم»؟",
+a:["صغير","جديد","بعيد","قصير"],
+c:1
+},
+{
+q:"ما الكوكب الذي نعيش عليه؟",
+a:["المريخ","الأرض","الزهرة","المشتري"],
+c:1
+},
+{
+q:"ما وحدة قياس الكتلة؟",
+a:["المتر","الثانية","الكيلوغرام","اللتر"],
+c:2
+},
+{
+q:"ما ناتج 15 + 27؟",
+a:["32","40","42","52"],
+c:2
+},
+{
+q:"أي مما يأتي من مصادر الطاقة؟",
+a:["الشمس","الكتاب","الطاولة","القلم"],
+c:0
+},
+{
+q:"كم ضلعًا للمثلث؟",
+a:["2","3","4","5"],
+c:1
+}
+],
+
+hard:[
+{
+q:"ما قيمة 4²؟",
+a:["6","8","12","16"],
+c:3
+},
+{
+q:"إذا كان س + 7 = 15، فما قيمة س؟",
+a:["6","7","8","9"],
+c:2
+},
+{
+q:"أي كسر أكبر؟",
+a:["1/4","1/2","1/8","1/10"],
+c:1
+},
+{
+q:"محيط مستطيل طوله 8 سم وعرضه 3 سم يساوي؟",
+a:["11","16","22","24"],
+c:2
+},
+{
+q:"ما العملية التي تحول الماء السائل إلى بخار؟",
+a:["التجمد","التبخر","التكاثف","الانصهار"],
+c:1
+}
+]
+},
+
+8:{
+easy:[
+{
+q:"ما ناتج 9 × 7؟",
+a:["54","63","72","81"],
+c:1
+},
+{
+q:"أي عدد من الآتي عدد صحيح؟",
+a:["-3","1/2","0.5","3/4"],
+c:0
+},
+{
+q:"ما ناتج 81 ÷ 9؟",
+a:["7","8","9","10"],
+c:2
+},
+{
+q:"ما مفرد كلمة «طلاب»؟",
+a:["طالب","طلب","طلاب","طالبة"],
+c:0
+},
+{
+q:"أي عضو مسؤول عن ضخ الدم؟",
+a:["الرئة","القلب","المعدة","الكبد"],
+c:1
+},
+{
+q:"ما مصدر الضوء الطبيعي؟",
+a:["الشمس","المصباح","الهاتف","الشاشة"],
+c:0
+},
+{
+q:"ما محيط مربع طول ضلعه 4 سم؟",
+a:["8","12","16","20"],
+c:2
+},
+{
+q:"أي مما يأتي فعل؟",
+a:["مدرسة","كتاب","يكتب","قلم"],
+c:2
+},
+{
+q:"ما ناتج 100 - 37؟",
+a:["53","63","73","83"],
+c:1
+},
+{
+q:"ما وحدة قياس الزمن؟",
+a:["المتر","الثانية","الكيلوغرام","اللتر"],
+c:1
+}
+],
+
+hard:[
+{
+q:"حل: 2س + 4 = 14",
+a:["3","4","5","6"],
+c:2
+},
+{
+q:"ما قيمة 3³؟",
+a:["9","18","27","36"],
+c:2
+},
+{
+q:"إذا كان نصف العدد 12، فما العدد؟",
+a:["6","18","24","36"],
+c:2
+},
+{
+q:"مساحة مستطيل طوله 10 وعرضه 4 تساوي؟",
+a:["14","28","40","80"],
+c:2
+},
+{
+q:"ما الغاز الذي تحتاجه النباتات في البناء الضوئي؟",
+a:["الأكسجين","ثاني أكسيد الكربون","النيتروجين","الهيدروجين"],
+c:1
+}
+]
+},
+
+9:{
+easy:[
+{
+q:"ما ناتج 12 × 6؟",
+a:["62","72","82","92"],
+c:1
+},
+{
+q:"ما قيمة √49؟",
+a:["5","6","7","8"],
+c:2
+},
+{
+q:"إذا كان س = 5، فما قيمة 2س؟",
+a:["5","7","10","15"],
+c:2
+},
+{
+q:"أي مما يأتي عدد أولي؟",
+a:["21","25","31","35"],
+c:2
+},
+{
+q:"ما مفرد كلمة «مدارس»؟",
+a:["مدرس","مدرسة","درس","دارس"],
+c:1
+},
+{
+q:"ما العضو المسؤول عن التنفس؟",
+a:["القلب","الرئة","المعدة","الكبد"],
+c:1
+},
+{
+q:"ما مساحة مربع طول ضلعه 5؟",
+a:["10","20","25","30"],
+c:2
+},
+{
+q:"ما ناتج 144 ÷ 12؟",
+a:["10","11","12","13"],
+c:2
+},
+{
+q:"أي مما يأتي تغير كيميائي؟",
+a:["انصهار الثلج","احتراق الورق","قطع الورق","تبخر الماء"],
+c:1
+},
+{
+q:"ما عكس كلمة «نجاح»؟",
+a:["تفوق","فشل","اجتهاد","تقدم"],
+c:1
+}
+],
+
+hard:[
+{
+q:"حل: 3س - 5 = 16",
+a:["5","6","7","8"],
+c:2
+},
+{
+q:"ما قيمة 2⁵؟",
+a:["10","16","32","64"],
+c:2
+},
+{
+q:"إذا كان محيط دائرة يعتمد على نصف القطر، فماذا يحدث للمحيط عند زيادة نصف القطر؟",
+a:["يزداد","ينقص","لا يتغير","يصبح صفرًا"],
+c:0
+},
+{
+q:"ما ناتج (8 × 3) + 12 ÷ 4؟",
+a:["24","25","27","30"],
+c:2
+},
+{
+q:"أي جهاز في الجسم مسؤول بشكل أساسي عن نقل الدم؟",
+a:["الجهاز الدوري","الجهاز الهضمي","الجهاز التنفسي","الجهاز العصبي"],
+c:0
+}
+]
+}
+
+};
+
+/* =========================
+   LOGIN
+========================= */
 
 function login(){
 
-  const name = document.getElementById("nameInput").value.trim();
-  const gender = document.getElementById("genderInput").value;
-  const grade = document.getElementById("gradeInput").value;
-  const password = document.getElementById("passwordInput").value;
+    const name=document.getElementById("studentName").value.trim();
+    const gender=document.getElementById("gender").value;
+    const grade=document.getElementById("grade").value;
 
-  if(!name || !gender || !grade || !password){
-    alert("الرجاء تعبئة جميع البيانات.");
-    return;
-  }
+    if(!name || !gender || !grade){
+        alert("يرجى تعبئة جميع البيانات.");
+        return;
+    }
 
-  user = {
-    name:name,
-    gender:gender,
-    grade:grade
-  };
+    const user={name,gender,grade};
 
-  localStorage.setItem("idadiUser",JSON.stringify(user));
+    localStorage.setItem("manhajnaUser",JSON.stringify(user));
 
-  startApp();
+    showApp(user);
 }
 
+function showApp(user){
 
-function startApp(){
+    document.getElementById("loginPage").classList.add("hidden");
+    document.getElementById("app").classList.remove("hidden");
 
-  if(!user) return;
+    document.getElementById("miniUser").textContent =
+        user.name + " • " + gradeNames[user.grade];
 
-  document.getElementById("loginPage").classList.add("hidden");
-  document.getElementById("app").classList.remove("hidden");
-
-  updateUser();
-  renderSubjects();
-  renderHomeSubjects();
-  renderAssignments();
-
+    document.getElementById("profileName").textContent=user.name;
+    document.getElementById("profileGender").textContent=user.gender;
+    document.getElementById("profileGrade").textContent=gradeNames[user.grade];
 }
-
-
-function updateUser(){
-
-  document.getElementById("studentNameTop").textContent = user.name;
-  document.getElementById("studentGradeTop").textContent = user.grade;
-  document.getElementById("welcomeName").textContent = user.name;
-
-  document.getElementById("profileName").textContent = user.name;
-  document.getElementById("profileGender").textContent = user.gender;
-  document.getElementById("profileGrade").textContent = user.grade;
-
-  document.getElementById("avatar").textContent =
-    user.name.charAt(0);
-
-  document.getElementById("subjectsSubtitle").textContent =
-    "المواد الخاصة بـ " + user.grade;
-
-}
-
-
-function showPage(page,button){
-
-  const pages = [
-    "homePage",
-    "gradesPage",
-    "subjectsPage",
-    "quizzesPage",
-    "assignmentsPage",
-    "profilePage"
-  ];
-
-  pages.forEach(p=>{
-    document.getElementById(p).classList.add("hidden");
-  });
-
-  document.getElementById(page+"Page").classList.remove("hidden");
-
-  document.querySelectorAll(".nav-btn").forEach(btn=>{
-    btn.classList.remove("active");
-  });
-
-  if(button){
-    button.classList.add("active");
-  }
-
-  const titles = {
-    home:"الرئيسية",
-    grades:"الصفوف",
-    subjects:"المواد",
-    quizzes:"الاختبارات",
-    assignments:"الواجبات",
-    profile:"حسابي"
-  };
-
-  document.getElementById("pageTitle").textContent =
-    titles[page];
-
-  if(page==="quizzes"){
-    renderQuizSelection();
-  }
-
-  if(page==="assignments"){
-    renderAssignments();
-  }
-
-}
-
-
-function renderSubjects(){
-
-  const container =
-    document.getElementById("subjectsList");
-
-  container.innerHTML = "";
-
-  subjects.forEach(subject=>{
-
-    container.innerHTML += `
-      <div class="card">
-        <div class="subject-icon">${subject.icon}</div>
-        <h3>${subject.name}</h3>
-        <p>${subject.desc}</p>
-        <button class="small-btn"
-          onclick="openSubject('${subject.name}')">
-          دخول للمادة
-        </button>
-      </div>
-    `;
-
-  });
-
-}
-
-
-function renderHomeSubjects(){
-
-  const container =
-    document.getElementById("homeSubjects");
-
-  container.innerHTML = "";
-
-  subjects.slice(0,6).forEach(subject=>{
-
-    container.innerHTML += `
-      <div class="card">
-        <div class="subject-icon">${subject.icon}</div>
-        <h3>${subject.name}</h3>
-        <p>${subject.desc}</p>
-        <button class="small-btn"
-          onclick="showSubjects()">
-          عرض المادة
-        </button>
-      </div>
-    `;
-
-  });
-
-}
-
-
-function showSubjects(){
-
-  document.querySelectorAll(".nav-btn").forEach(btn=>{
-    btn.classList.remove("active");
-  });
-
-  document.getElementById("subjectsPage").classList.remove("hidden");
-  document.getElementById("homePage").classList.add("hidden");
-  document.getElementById("gradesPage").classList.add("hidden");
-  document.getElementById("quizzesPage").classList.add("hidden");
-  document.getElementById("assignmentsPage").classList.add("hidden");
-  document.getElementById("profilePage").classList.add("hidden");
-
-  document.getElementById("pageTitle").textContent="المواد";
-}
-
-
-function openSubject(name){
-
-  alert(
-    "📚 " + name +
-    "\n\nسيتم هنا إضافة الدروس والملخصات وأسئلة المادة.\n\n" +
-    "الخطوة القادمة نقدر نضيف منهج البحرين لكل صف."
-  );
-
-}
-
-
-function changeGrade(grade){
-
-  user.grade = grade;
-
-  localStorage.setItem("idadiUser",JSON.stringify(user));
-
-  updateUser();
-
-  alert("تم اختيار: " + grade);
-
-  showSubjects();
-
-}
-
-
-function renderQuizSelection(){
-
-  const container =
-    document.getElementById("quizSelection");
-
-  container.innerHTML="";
-
-  document.getElementById("quizContainer")
-    .classList.add("hidden");
-
-  quizzes.forEach((quiz,index)=>{
-
-    let icon="📝";
-
-    if(quiz.subject==="الرياضيات") icon="📐";
-    if(quiz.subject==="اللغة العربية") icon="📖";
-    if(quiz.subject==="اللغة الإنجليزية") icon="🔤";
-
-    container.innerHTML += `
-      <div class="card">
-        <div class="subject-icon">${icon}</div>
-        <h3>اختبار ${quiz.subject}</h3>
-        <p>${quiz.questions.length} أسئلة</p>
-
-        <button class="small-btn"
-          onclick="startQuiz(${index})">
-          ابدأ الاختبار
-        </button>
-      </div>
-    `;
-
-  });
-
-}
-
-
-function startQuiz(index){
-
-  currentQuiz = quizzes[index];
-  currentQuestion = 0;
-  score = 0;
-
-  document.getElementById("quizSelection")
-    .classList.add("hidden");
-
-  document.getElementById("quizContainer")
-    .classList.remove("hidden");
-
-  renderQuestion();
-
-}
-
-
-function renderQuestion(){
-
-  const container =
-    document.getElementById("quizContainer");
-
-  const q =
-    currentQuiz.questions[currentQuestion];
-
-  selectedAnswer = null;
-
-  container.innerHTML = `
-
-    <div style="color:#64748b">
-      اختبار ${currentQuiz.subject}
-    </div>
-
-    <div style="margin-top:8px">
-      السؤال ${currentQuestion+1}
-      من ${currentQuiz.questions.length}
-    </div>
-
-    <div class="question">
-      ${q.q}
-    </div>
-
-    <div class="answers">
-
-      ${q.answers.map((answer,index)=>`
-
-        <button class="answer"
-          onclick="selectAnswer(${index},this)">
-          ${answer}
-        </button>
-
-      `).join("")}
-
-    </div>
-
-    <div class="quiz-actions">
-
-      <button class="small-btn"
-        onclick="nextQuestion()">
-        ${currentQuestion === currentQuiz.questions.length-1
-          ? "إنهاء الاختبار"
-          : "السؤال التالي"}
-      </button>
-
-    </div>
-
-  `;
-
-}
-
-
-function selectAnswer(index,button){
-
-  selectedAnswer = index;
-
-  document.querySelectorAll(".answer")
-    .forEach(btn=>btn.classList.remove("selected"));
-
-  button.classList.add("selected");
-
-}
-
-
-function nextQuestion(){
-
-  if(selectedAnswer === null){
-    alert("اختر إجابة أولاً.");
-    return;
-  }
-
-  const correct =
-    currentQuiz.questions[currentQuestion].correct;
-
-  if(selectedAnswer === correct){
-    score++;
-  }
-
-  currentQuestion++;
-
-  if(currentQuestion >= currentQuiz.questions.length){
-
-    showResult();
-
-  }else{
-
-    renderQuestion();
-
-  }
-
-}
-
-
-function showResult(){
-
-  const container =
-    document.getElementById("quizContainer");
-
-  const total =
-    currentQuiz.questions.length;
-
-  const percentage =
-    Math.round((score/total)*100);
-
-  container.innerHTML = `
-
-    <div style="text-align:center">
-
-      <div style="font-size:55px">🎉</div>
-
-      <h2>خلصت الاختبار!</h2>
-
-      <p style="margin:15px 0;color:#64748b">
-        نتيجتك في اختبار ${currentQuiz.subject}
-      </p>
-
-      <div style="font-size:42px;font-weight:bold;color:#2563eb">
-        ${score} / ${total}
-      </div>
-
-      <p style="margin:15px 0">
-        النسبة: ${percentage}%
-      </p>
-
-      <button class="main-btn"
-        onclick="renderQuizSelection()">
-        العودة للاختبارات
-      </button>
-
-    </div>
-
-  `;
-
-}
-
-
-function renderAssignments(){
-
-  const container =
-    document.getElementById("assignmentsList");
-
-  container.innerHTML="";
-
-  assignments.forEach((assignment,index)=>{
-
-    container.innerHTML += `
-
-      <div class="card assignment"
-        style="margin-bottom:12px">
-
-        <div>
-          <h3 style="${assignment.done
-            ? 'text-decoration:line-through;color:#94a3b8'
-            : ''}">
-            ${assignment.name}
-          </h3>
-
-          <p style="margin-top:5px;color:#64748b">
-            واجب دراسي
-          </p>
-        </div>
-
-        <input
-          class="check"
-          type="checkbox"
-          ${assignment.done ? "checked":""}
-          onchange="toggleAssignment(${index})">
-
-      </div>
-
-    `;
-
-  });
-
-  updateAssignmentCount();
-
-}
-
-
-function toggleAssignment(index){
-
-  assignments[index].done =
-    !assignments[index].done;
-
-  localStorage.setItem(
-    "idadiAssignments",
-    JSON.stringify(assignments)
-  );
-
-  renderAssignments();
-
-}
-
-
-function updateAssignmentCount(){
-
-  const completed =
-    assignments.filter(a=>a.done).length;
-
-  document.getElementById("completedCount")
-    .textContent = completed;
-
-  document.getElementById("assignmentCount")
-    .textContent = assignments.length;
-
-}
-
 
 function logout(){
 
-  localStorage.removeItem("idadiUser");
+    localStorage.removeItem("manhajnaUser");
 
-  location.reload();
-
+    document.getElementById("app").classList.add("hidden");
+    document.getElementById("loginPage").classList.remove("hidden");
 }
 
+/* =========================
+   NAVIGATION
+========================= */
 
-if(user){
+function page(name,button){
 
-  startApp();
+    const pages=[
+        "home",
+        "grades",
+        "exams",
+        "quiz",
+        "ai",
+        "profile"
+    ];
+
+    pages.forEach(p=>{
+        document.getElementById(p+"Page").classList.add("hidden");
+    });
+
+    document.getElementById(name+"Page").classList.remove("hidden");
+
+    if(button){
+        document.querySelectorAll(".nav")
+            .forEach(x=>x.classList.remove("active"));
+
+        button.classList.add("active");
+    }
+
+    const titles={
+        home:"الرئيسية",
+        grades:"الصفوف",
+        exams:"الاختبارات",
+        quiz:"الاختبار",
+        ai:"مساعد AI",
+        profile:"حسابي"
+    };
+
+    document.getElementById("pageTitle").textContent=titles[name];
+}
+
+function selectGrade(g){
+
+    localStorage.setItem("selectedGrade",g);
+
+    alert(
+        "تم اختيار " +
+        gradeNames[g] +
+        " 🎓\nيمكنك الآن الدخول إلى الاختبارات."
+    );
+
+    page("exams");
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+let quizQuestions=[];
+let quizIndex=0;
+let quizScore=0;
+
+function startQuiz(level){
+
+    const user=JSON.parse(localStorage.getItem("manhajnaUser"));
+
+    const grade=user ? user.grade : "6";
+
+    let easy=questions[grade].easy;
+    let hard=questions[grade].hard;
+
+    if(level==="easy"){
+        quizQuestions=easy;
+    }else{
+
+        /*
+          الاختبار الصعب = 10 أسئلة سهلة
+          + 5 أسئلة صعبة
+          ليصبح المجموع 15.
+        */
+
+        quizQuestions=[
+            ...easy,
+            ...hard
+        ];
+    }
+
+    quizIndex=0;
+    quizScore=0;
+
+    page("quiz");
+
+    showQuestion();
+}
+
+function showQuestion(){
+
+    const q=quizQuestions[quizIndex];
+
+    document.getElementById("quizTop").innerHTML=`
+        <b>السؤال ${quizIndex+1} من ${quizQuestions.length}</b>
+    `;
+
+    document.getElementById("progressBar").style.width=
+        ((quizIndex)/quizQuestions.length*100)+"%";
+
+    let html=`
+        <div class="question">${q.q}</div>
+        <div class="answers">
+    `;
+
+    q.a.forEach((answer,i)=>{
+
+        html+=`
+            <button class="answer"
+                    onclick="answer(${i})">
+                ${answer}
+            </button>
+        `;
+
+    });
+
+    html+=`</div>`;
+
+    document.getElementById("questionArea").innerHTML=html;
+}
+
+function answer(index){
+
+    const q=quizQuestions[quizIndex];
+
+    const buttons=document.querySelectorAll(".answer");
+
+    buttons.forEach((b,i)=>{
+        b.disabled=true;
+
+        if(i===q.c)
+            b.classList.add("correct");
+
+        if(i===index && i!==q.c)
+            b.classList.add("wrong");
+    });
+
+    if(index===q.c)
+        quizScore++;
+
+    setTimeout(()=>{
+
+        quizIndex++;
+
+        if(quizIndex<quizQuestions.length){
+            showQuestion();
+        }else{
+            finishQuiz();
+        }
+
+    },650);
+}
+
+function finishQuiz(){
+
+    document.getElementById("progressBar").style.width="100%";
+
+    const total=quizQuestions.length;
+    const percentage=Math.round((quizScore/total)*100);
+
+    document.getElementById("quizTop").innerHTML="النتيجة النهائية";
+
+    document.getElementById("questionArea").innerHTML=`
+        <div class="result">
+
+            <h2>🎉 انتهى الاختبار!</h2>
+
+            <div class="score">
+                ${quizScore}/${total}
+            </div>
+
+            <p>
+                نتيجتك:
+                <b>${percentage}%</b>
+            </p>
+
+            <br>
+
+            <button class="btn primary"
+                    onclick="page('exams')">
+                العودة للاختبارات
+            </button>
+
+        </div>
+    `;
+}
+
+/* =========================
+   AI PLACEHOLDER
+========================= */
+
+function askAI(){
+
+    const input=document.getElementById("aiInput");
+    const chat=document.getElementById("chat");
+
+    const text=input.value.trim();
+
+    if(!text)return;
+
+    chat.innerHTML+=`
+        <div class="message me">
+            ${escapeHTML(text)}
+        </div>
+    `;
+
+    input.value="";
+
+    setTimeout(()=>{
+
+        chat.innerHTML+=`
+            <div class="message bot">
+                وصلتني سؤالك 👍
+                <br>
+                حاليًا هذه نسخة تجريبية من مساعد AI.
+                عند ربط واجهة AI حقيقية، أقدر أخلي المساعد
+                يشرح الدرس ويحل الأسئلة خطوة بخطوة.
+            </div>
+        `;
+
+        chat.scrollTop=chat.scrollHeight;
+
+    },500);
+}
+
+function escapeHTML(text){
+
+    return text
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+}
+
+/* =========================
+   START
+========================= */
+
+const saved=localStorage.getItem("manhajnaUser");
+
+if(saved){
+
+    showApp(JSON.parse(saved));
+
+}else{
+
+    document.getElementById("loginPage").classList.remove("hidden");
 
 }
 
